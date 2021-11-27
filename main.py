@@ -2,19 +2,6 @@ import smtplib
 import random
 import datetime as dt
 
-# my_email = 'kccodetest@gmail.com'
-# my_password = 'klayclarkecodetest'
-#
-# with smtplib.SMTP('smtp.gmail.com') as connection:
-#     # make connection secure / encrypted
-#     connection.starttls()
-#     # to login to email service
-#     connection.login(user=my_email, password=my_password)
-#     # to send mail and message
-#     connection.sendmail(from_addr=my_email,
-#                         to_addrs='klayaclarke@gmail.com',
-#                         msg='Subject:Code Test\n\nHello world!')
-
 # find out which day of the week it is
 
 now = dt.datetime.now()
@@ -27,4 +14,16 @@ with open('quotes.txt', mode='r') as file:
     list_of_quotes = file.readlines()
 
 random_quote = random.choice(list_of_quotes)
-print(random_quote)
+
+my_email = 'kccodetest@gmail.com'
+my_password = 'klayclarkecodetest'
+
+with smtplib.SMTP('smtp.gmail.com') as connection:
+    # make connection secure / encrypted
+    connection.starttls()
+    # to login to email service
+    connection.login(user=my_email, password=my_password)
+    # to send mail and message
+    connection.sendmail(from_addr=my_email,
+                        to_addrs='klayaclarke@gmail.com',
+                        msg=f'Subject:Code Test\n\n{random_quote}')
