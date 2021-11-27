@@ -26,4 +26,4 @@ with smtplib.SMTP('smtp.gmail.com') as connection:
     # to send mail and message
     connection.sendmail(from_addr=my_email,
                         to_addrs='klayaclarke@gmail.com',
-                        msg=f'Subject:Code Test\n\n{random_quote}')
+                        msg=f'Subject:Quote Of The Day\n\n{random_quote}')
