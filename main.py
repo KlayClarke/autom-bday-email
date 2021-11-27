@@ -1,4 +1,5 @@
 import smtplib
+import random
 import datetime as dt
 
 # my_email = 'kccodetest@gmail.com'
@@ -13,6 +14,15 @@ import datetime as dt
 #     connection.sendmail(from_addr=my_email,
 #                         to_addrs='klayaclarke@gmail.com',
 #                         msg='Subject:Code Test\n\nHello world!')
+
+# find out which day of the week it is
+
 now = dt.datetime.now()
 current_day_of_week = now.weekday()
 print(current_day_of_week)
+
+# open quotes.txt file and transfer all into a list
+
+with open('quotes.txt', mode='r') as file:
+    list_of_quotes = file.readlines()
+
