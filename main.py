@@ -26,3 +26,5 @@ print(current_day_of_week)
 with open('quotes.txt', mode='r') as file:
     list_of_quotes = file.readlines()
 
+random_quote = random.choice(list_of_quotes)
+print(random_quote)
