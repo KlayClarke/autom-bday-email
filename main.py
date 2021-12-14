@@ -19,8 +19,8 @@ today = (current_month, current_day)
 
 # open quotes.txt file and transfer all into a list
 
-my_email = 'kccodetest@gmail.com'
-my_password = 'klayclarkecodetest'
+my_email = MY_EMAIL
+my_password = MY_PASSWORD
 
 # check to see if birthday in birthdays.csv matches today's date
 
